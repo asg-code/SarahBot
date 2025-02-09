@@ -8,6 +8,7 @@
 
 package org.firstinspires.ftc.teamcode.opmodes;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
@@ -19,7 +20,7 @@ import org.firstinspires.ftc.teamcode.subsystems.PinpointOdometryRobot;
  * Pure Drive or Strafe motions are maintained using two Odometry Wheels.
  * The IMU gyro is used to stabilize the heading during all motions
  */
-
+@Disabled
 @Autonomous(name="Pinpoint Autonomous", group = "Test")
 public class PinpointAutonomous extends LinearOpMode
 {

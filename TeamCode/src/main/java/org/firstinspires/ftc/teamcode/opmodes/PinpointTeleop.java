@@ -6,6 +6,7 @@
 
 package org.firstinspires.ftc.teamcode.opmodes;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -18,6 +19,7 @@ import org.firstinspires.ftc.teamcode.subsystems.PinpointOdometryRobot;
  * The IMU gyro is used to stabilize the heading when the operator is not requesting a turn.
  */
 
+@Disabled
 @TeleOp(name="Pinpoint Teleop", group = "Test")
 public class PinpointTeleop extends LinearOpMode
 {

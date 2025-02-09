@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.opmodes;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
@@ -24,6 +25,8 @@ import org.firstinspires.ftc.teamcode.subsystems.PinpointOdometryRobot;
  * Rotate the robot counter clockwise and check if the heading value increases. +ve = CCW, -ve = CW.
  * If using imu on goBilda Pinpoint, make sure it mounted correctly. If not, adjust the orientation.
  */
+
+@Disabled
 @TeleOp(name="Pinpoint Calibrate", group="Tests")
 public class PinpointCalibrate extends LinearOpMode {
     // get an instance of the "Robot" class.

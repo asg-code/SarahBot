@@ -1,10 +1,11 @@
 package org.firstinspires.ftc.teamcode.opmodes;
 
+import com.acmerobotics.roadrunner.Pose2d;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.subsystems.MecanumDrive;
+import org.firstinspires.ftc.teamcode.MecanumDrive;
 import org.firstinspires.ftc.teamcode.subsystems.PinpointOdometryRobot;
 
 /**
@@ -31,7 +32,7 @@ import org.firstinspires.ftc.teamcode.subsystems.PinpointOdometryRobot;
 public class PinpointCalibrate extends LinearOpMode {
     // get an instance of the "Robot" class.
     private PinpointOdometryRobot robot = new PinpointOdometryRobot(this);
-    private final MecanumDrive mecanumDrive = new MecanumDrive();
+    private MecanumDrive mecanumDrive;
 
     @Override public void runOpMode() {
 
@@ -41,7 +42,7 @@ public class PinpointCalibrate extends LinearOpMode {
 
         // Initialize the mecanum drive train
         // We use this for driving the robot using motors
-        mecanumDrive.init(hardwareMap);
+        mecanumDrive = new MecanumDrive(hardwareMap, new Pose2d(0, 0, 0));
 
         // Wait for driver to press start
         telemetry.addData(">", "Touch Play to run Auto");
@@ -73,7 +74,7 @@ public class PinpointCalibrate extends LinearOpMode {
                 double rotate = gamepad1.right_stick_x;
 
                 // Set the powers for the mecanum drive train
-                mecanumDrive.drive(forward, strafe, rotate);
+               // mecanumDrive.drive(forward, strafe, rotate);
             }
 
             telemetry.addData("Status", "Running");

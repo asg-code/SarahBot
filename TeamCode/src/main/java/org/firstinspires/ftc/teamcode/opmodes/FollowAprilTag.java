@@ -38,7 +38,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDir
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.controls.GainControl;
-import org.firstinspires.ftc.teamcode.HardwareConstant;
+import org.firstinspires.ftc.teamcode.HardwareConstants;
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
@@ -128,10 +128,10 @@ public class FollowAprilTag extends LinearOpMode
         // Initialize the hardware variables. Note that the strings used here as parameters
         // to 'get' must match the names assigned during the robot configuration.
         // step (using the FTC Robot Controller app on the phone).
-        leftFrontDrive  = hardwareMap.get(DcMotor.class, HardwareConstant.LeftFrontMotor);
-        rightFrontDrive = hardwareMap.get(DcMotor.class, HardwareConstant.RightFrontMotor);
-        leftBackDrive  = hardwareMap.get(DcMotor.class, HardwareConstant.LeftBackMotor);
-        rightBackDrive = hardwareMap.get(DcMotor.class, HardwareConstant.RightBackMotor);
+        leftFrontDrive  = hardwareMap.get(DcMotor.class, HardwareConstants.LeftFrontMotor);
+        rightFrontDrive = hardwareMap.get(DcMotor.class, HardwareConstants.RightFrontMotor);
+        leftBackDrive  = hardwareMap.get(DcMotor.class, HardwareConstants.LeftBackMotor);
+        rightBackDrive = hardwareMap.get(DcMotor.class, HardwareConstants.RightBackMotor);
 
         // To drive forward, most robots need the motor on one side to be reversed, because the axles point in opposite directions.
         // When run, this OpMode should start both motors driving forward. So adjust these two lines based on your first test drive.

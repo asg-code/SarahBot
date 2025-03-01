@@ -1,5 +1,5 @@
 package org.firstinspires.ftc.teamcode;
-public class HardwareConstants {
+public class HardwareConstant {
     public static String LeftFrontMotor = "leftFront"; // Expansion Hub motor Port 0
     public static String LeftBackMotor = "leftBack"; // Expansion Hub motor Port 1
     public static String RightBackMotor = "rightBack"; // Control Hub motor Port 1

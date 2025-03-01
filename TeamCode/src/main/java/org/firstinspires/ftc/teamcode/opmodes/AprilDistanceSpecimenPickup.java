@@ -4,7 +4,6 @@ import static com.qualcomm.robotcore.util.ElapsedTime.Resolution.SECONDS;
 
 import android.util.Size;
 
-import com.acmerobotics.roadrunner.Action;
 import com.acmerobotics.roadrunner.Pose2d;
 import com.acmerobotics.roadrunner.PoseVelocity2d;
 import com.acmerobotics.roadrunner.SequentialAction;
@@ -25,7 +24,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.Position;
 import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
-import org.firstinspires.ftc.teamcode.HardwareConstants;
+import org.firstinspires.ftc.teamcode.HardwareConstant;
 import org.firstinspires.ftc.teamcode.MecanumDrive;
 import org.firstinspires.ftc.teamcode.subsystems.GamepadController;
 import org.firstinspires.ftc.vision.VisionPortal;
@@ -254,7 +253,7 @@ public class AprilDistanceSpecimenPickup extends LinearOpMode {
         driveTrain = new MecanumDrive(hardwareMap, new Pose2d(0,0,0));
         gamepadController = new GamepadController(gamepad1, gamepad2, driveTrain, this);
         // you can use this as a regular DistanceSensor.
-        robotDistanceSensor = hardwareMap.get(DistanceSensor.class, HardwareConstants.RobotDistanceSensor);
+        robotDistanceSensor = hardwareMap.get(DistanceSensor.class, HardwareConstant.RobotDistanceSensor);
 
         // Set the bulk mode to auto for control and expansion hubs
         // This optimizes the communication between the robot controller and the expansion hubs and
